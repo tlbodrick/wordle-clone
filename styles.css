@@ -6,6 +6,7 @@ body {
 }
 
 .container {
+    width: 100%;
     margin-top: 5rem;
     display: flex;
     flex-direction: column;
@@ -41,6 +42,7 @@ h1 {
 }
 
 .cell {
+    padding: 1.5rem;
     border: 2px solid #efefef;
     margin: 2px;
     border-radius: 4px;
@@ -89,8 +91,7 @@ h1 {
     display: grid;
     grid-template-rows: repeat(6, 1fr);
     grid-gap: 5px;
-    min-width: 350px;
-    height: 26rem;
+
 }
 
 .row {
@@ -101,9 +102,7 @@ h1 {
 
 .keyboard {
     margin-top: 3rem;
-    display: flex;
-    flex-direction: column;
-    place-items: center;
+    min-width: 0;
 }
 
 .keyrow {
@@ -118,11 +117,24 @@ h1 {
 }
 
 .key {
+    padding: 1rem;
     font-weight: bold;
     background-color: #e0e0e0;
     flex: 1;
     border-radius: 5px;
-    padding: 1rem;
+}
+
+@media (max-width: 40rem) {
+    .key {
+        padding: .75rem;
+    }
+}
+
+@media (max-width: 30rem) {
+
+    .key {
+        padding: .5rem;
+    }
 }
 
 .big {
